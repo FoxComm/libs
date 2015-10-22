@@ -1,0 +1,12 @@
+multilevel_checkout_loyalty_points:
+  checkoutrule:
+    rule:
+      multilevel: true
+      accumulationlimit: 10
+    treelevels:
+      - 0.05
+      - 0.03
+      - 0.01
+    isvariable: true
+    varies_by: 0
+    percentageallocated: 1

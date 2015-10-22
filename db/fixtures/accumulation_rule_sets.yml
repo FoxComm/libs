@@ -1,0 +1,47 @@
+checkout:
+  actionname: checkout
+  rulestack:
+    -
+      ruletype: accumulation.LoyaltyPointsCheckoutRule
+      loyaltypointscheckoutrule:
+        checkoutrule:
+          rule:
+            multilevel: true
+            accumulationlimit: 10
+          treelevels:
+            - 0.5
+            - 0.4
+            - 0.3
+            - 0.2
+            - 0.1
+          isvariable: true
+          variesby: 0
+          percentageallocated: 1
+    -
+      ruletype: accumulation.BeneficiaryCheckoutRule
+      beneficiarycheckoutrule:
+        checkoutrule:
+          rule:
+            multilevel: false
+            accumulationlimit: 10
+          isvariable: true
+          variesby: 0
+          percentageallocated: 0.05
+    -
+      ruletype: accumulation.OwnPurchaseCheckoutRule
+      ownpurchasecheckoutrule:
+        checkoutrule:
+          rule:
+            multilevel: false
+          isvariable: true
+          variesby: 0
+          percentageallocated: 0.1
+    -
+      ruletype: accumulation.FirstPurchaseRule
+
+signup:
+  actionname: signup
+  rulestack:
+    -
+      ruletype: accumulation.SignupCCRule
+
