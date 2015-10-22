@@ -9,9 +9,9 @@ import (
 	"gopkg.in/mgo.v2/bson"
 
 	"github.com/FoxComm/FoxComm/endpoints"
-	"github.com/FoxComm/FoxComm/utils"
 	"github.com/FoxComm/core_services/feature_manager/core"
 	"github.com/FoxComm/libs/db/masterdb"
+	"github.com/FoxComm/libs/utils"
 )
 
 type Mongo struct {

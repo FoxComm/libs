@@ -2,9 +2,9 @@ package db_switcher
 
 import (
 	"github.com/FoxComm/FoxComm/endpoints"
-	"github.com/FoxComm/FoxComm/utils"
 	"github.com/FoxComm/core_services/feature_manager/core"
 	"github.com/FoxComm/libs/db/masterdb"
+	"github.com/FoxComm/libs/utils"
 	"github.com/gin-gonic/gin"
 	"github.com/jinzhu/gorm"
 )
