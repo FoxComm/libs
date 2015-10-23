@@ -1,9 +1,9 @@
 package configs
 
 import (
+	ct "github.com/FoxComm/libs/Godeps/_workspace/src/github.com/daviddengcn/go-colortext"
 	"github.com/FoxComm/libs/etcd_client"
 	"github.com/FoxComm/libs/logger"
-	ct "github.com/daviddengcn/go-colortext"
 
 	"fmt"
 	"os"

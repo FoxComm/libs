@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"os"
 
+	"github.com/FoxComm/libs/Godeps/_workspace/src/github.com/coreos/go-etcd/etcd"
 	"github.com/FoxComm/libs/logger"
-	"github.com/coreos/go-etcd/etcd"
 )
 
 var EtcdDefaults = map[string]string{

@@ -1,7 +1,7 @@
 package logger
 
 import (
-	"github.com/sirupsen/logrus"
+	"github.com/FoxComm/libs/Godeps/_workspace/src/github.com/sirupsen/logrus"
 	"regexp"
 	"runtime"
 	"strings"

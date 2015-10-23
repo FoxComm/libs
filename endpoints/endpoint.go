@@ -6,9 +6,9 @@ import (
 	"log"
 	"strconv"
 
+	"github.com/FoxComm/libs/Godeps/_workspace/src/github.com/mailgun/vulcan/location/httploc"
+	"github.com/FoxComm/libs/Godeps/_workspace/src/github.com/mailgun/vulcan/middleware"
 	"github.com/FoxComm/libs/logger"
-	"github.com/mailgun/vulcan/location/httploc"
-	"github.com/mailgun/vulcan/middleware"
 
 	"fmt"
 	"net"

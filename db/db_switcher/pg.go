@@ -5,11 +5,11 @@ import (
 	"os"
 	"strings"
 
-	_ "github.com/jpfuentes2/go-env/autoload"
+	_ "github.com/FoxComm/libs/Godeps/_workspace/src/github.com/jpfuentes2/go-env/autoload"
 
+	"github.com/FoxComm/libs/Godeps/_workspace/src/github.com/gin-gonic/gin"
+	"github.com/FoxComm/libs/Godeps/_workspace/src/github.com/jinzhu/gorm"
 	"github.com/FoxComm/libs/utils"
-	"github.com/gin-gonic/gin"
-	"github.com/jinzhu/gorm"
 )
 
 type PG struct {
