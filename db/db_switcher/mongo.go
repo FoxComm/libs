@@ -1,16 +1,18 @@
 package db_switcher
 
 import (
+	"fmt"
 	"net/http"
+	"os"
 	"reflect"
+	"strings"
 
 	"github.com/gin-gonic/gin"
 	"gopkg.in/mgo.v2"
 	"gopkg.in/mgo.v2/bson"
 
-	"github.com/FoxComm/libs/endpoints"
-	"github.com/FoxComm/core_services/feature_manager/core"
-	"github.com/FoxComm/libs/db/masterdb"
+	_ "github.com/jpfuentes2/go-env/autoload"
+
 	"github.com/FoxComm/libs/utils"
 )
 
@@ -49,22 +51,22 @@ func (mgo *Mongo) InitializeWithRequest(request *http.Request, collection string
 	return err
 }
 
-func (mgo *Mongo) InitializeWithStoreID(storeID int, collection string, feature *endpoints.Endpoint) error {
-	var storeFeature core.StoreFeature
+func (mgo *Mongo) InitializeForFeature(collection, featureName string) error {
+	dataSourceKey := fmt.Sprintf("%s_DATASOURCE", strings.ToUpper(featureName))
+	dataSource := os.Getenv(dataSourceKey)
 
-	masterdb.Db().
-		Joins("INNER JOIN features ON features.id = store_features.feature_id").
-		Where("store_id = ? AND features.name = ?", storeID, feature.Name).
-		First(&storeFeature)
-
-	db, err := utils.GetMongoWithDataSource(storeFeature.Datasource)
-
-	if err == nil {
-		mgo.Collection = db.C(collection)
-		mgo.Database = db
+	if dataSource == "" {
+		return fmt.Errorf("Data source for %s not found in the ENV", dataSourceKey)
 	}
 
-	return err
+	db, err := utils.GetMongoWithDataSource(dataSource)
+	if err != nil {
+		return err
+	}
+
+	mgo.Collection = db.C(collection)
+	mgo.Database = db
+	return nil
 }
 
 func (repo *Mongo) Create(value interface{}) error {

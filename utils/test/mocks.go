@@ -6,7 +6,7 @@ import (
 	"net/http/httptest"
 
 	"github.com/FoxComm/FoxComm/social_analytics/models"
-	"github.com/FoxComm/FoxComm/spree"
+	"github.com/FoxComm/libs/spree"
 	"github.com/gin-gonic/gin"
 )
 

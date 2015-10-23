@@ -5,7 +5,7 @@ import (
 	"time"
 
 	"github.com/FoxComm/FoxComm/social_analytics/models"
-	"github.com/FoxComm/FoxComm/spree"
+	"github.com/FoxComm/libs/spree"
 )
 
 func CheckoutSiteActivity(orderNumber string, user spree.User) models.SiteActivity {

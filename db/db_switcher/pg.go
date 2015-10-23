@@ -1,9 +1,12 @@
 package db_switcher
 
 import (
-	"github.com/FoxComm/libs/endpoints"
-	"github.com/FoxComm/core_services/feature_manager/core"
-	"github.com/FoxComm/libs/db/masterdb"
+	"fmt"
+	"os"
+	"strings"
+
+	_ "github.com/jpfuentes2/go-env/autoload"
+
 	"github.com/FoxComm/libs/utils"
 	"github.com/gin-gonic/gin"
 	"github.com/jinzhu/gorm"
@@ -19,11 +22,19 @@ func (pg *PG) InitializeWithContext(context *gin.Context) error {
 	return err
 }
 
-func (pg *PG) InitializeWithStoreID(storeID int, feature *endpoints.Endpoint) error {
-	var storeFeature core.StoreFeature
-	masterdb.Db().Joins("inner join features on features.id = store_features.feature_id").
-		Where("store_id = ? AND features.name = ?", storeID, feature.Name).First(&storeFeature)
-	db, err := utils.GetPostgresWithDataSource(storeFeature.Datasource)
+func (pg *PG) InitializeForFeature(featureName string) error {
+	dataSourceKey := fmt.Sprintf("%s_DATASOURCE", strings.ToUpper(featureName))
+	dataSource := os.Getenv(dataSourceKey)
+
+	if dataSource == "" {
+		return fmt.Errorf("Data source for %s is not found in the ENV", dataSourceKey)
+	}
+
+	db, err := utils.GetPostgresWithDataSource(dataSource)
+	if err != nil {
+		return err
+	}
+
 	pg.DB = db
-	return err
+	return nil
 }

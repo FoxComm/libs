@@ -5,7 +5,7 @@ import (
 	"net/http/httptest"
 	"strconv"
 
-	"github.com/FoxComm/FoxComm/spree"
+	"github.com/FoxComm/libs/spree"
 	"github.com/gin-gonic/gin"
 )
 

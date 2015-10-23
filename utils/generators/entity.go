@@ -2,7 +2,7 @@ package generators
 
 import (
 	"github.com/FoxComm/FoxComm/social_analytics/models"
-	"github.com/FoxComm/FoxComm/spree"
+	"github.com/FoxComm/libs/spree"
 )
 
 func Entity() models.Entity {
