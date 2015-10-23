@@ -5,8 +5,8 @@
 package gin
 
 import (
-	"fmt"
-	"io"
+	"log"
+	"os"
 	"time"
 )
 
@@ -22,35 +22,28 @@ var (
 )
 
 func ErrorLogger() HandlerFunc {
-	return ErrorLoggerT(ErrorTypeAny)
+	return ErrorLoggerT(ErrorTypeAll)
 }
 
-func ErrorLoggerT(typ ErrorType) HandlerFunc {
+func ErrorLoggerT(typ uint32) HandlerFunc {
 	return func(c *Context) {
 		c.Next()
-		// avoid writting if we already wrote into the response body
-		if !c.Writer.Written() {
-			errors := c.Errors.ByType(typ)
-			if len(errors) > 0 {
-				c.JSON(-1, errors)
-			}
+
+		errs := c.Errors.ByType(typ)
+		if len(errs) > 0 {
+			// -1 status code = do not change current one
+			c.JSON(-1, c.Errors)
 		}
 	}
 }
 
-// Instances a Logger middleware that will write the logs to gin.DefaultWriter
-// By default gin.DefaultWriter = os.Stdout
 func Logger() HandlerFunc {
-	return LoggerWithWriter(DefaultWriter)
-}
+	stdlogger := log.New(os.Stdout, "", 0)
+	//errlogger := log.New(os.Stderr, "", 0)
 
-// Instance a Logger middleware with the specified writter buffer.
-// Example: os.Stdout, a file opened in write mode, a socket...
-func LoggerWithWriter(out io.Writer) HandlerFunc {
 	return func(c *Context) {
 		// Start timer
 		start := time.Now()
-		path := c.Request.URL.Path
 
 		// Process request
 		c.Next()
@@ -64,27 +57,26 @@ func LoggerWithWriter(out io.Writer) HandlerFunc {
 		statusCode := c.Writer.Status()
 		statusColor := colorForStatus(statusCode)
 		methodColor := colorForMethod(method)
-		comment := c.Errors.ByType(ErrorTypePrivate).String()
 
-		fmt.Fprintf(out, "[GIN] %v |%s %3d %s| %13v | %s |%s  %s %-7s %s\n%s",
+		stdlogger.Printf("[GIN] %v |%s %3d %s| %12v | %s |%s  %s %-7s %s\n%s",
 			end.Format("2006/01/02 - 15:04:05"),
 			statusColor, statusCode, reset,
 			latency,
 			clientIP,
 			methodColor, reset, method,
-			path,
-			comment,
+			c.Request.URL.Path,
+			c.Errors.String(),
 		)
 	}
 }
 
 func colorForStatus(code int) string {
 	switch {
-	case code >= 200 && code < 300:
+	case code >= 200 && code <= 299:
 		return green
-	case code >= 300 && code < 400:
+	case code >= 300 && code <= 399:
 		return white
-	case code >= 400 && code < 500:
+	case code >= 400 && code <= 499:
 		return yellow
 	default:
 		return red
@@ -92,20 +84,20 @@ func colorForStatus(code int) string {
 }
 
 func colorForMethod(method string) string {
-	switch method {
-	case "GET":
+	switch {
+	case method == "GET":
 		return blue
-	case "POST":
+	case method == "POST":
 		return cyan
-	case "PUT":
+	case method == "PUT":
 		return yellow
-	case "DELETE":
+	case method == "DELETE":
 		return red
-	case "PATCH":
+	case method == "PATCH":
 		return green
-	case "HEAD":
+	case method == "HEAD":
 		return magenta
-	case "OPTIONS":
+	case method == "OPTIONS":
 		return white
 	default:
 		return reset
