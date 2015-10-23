@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/FoxComm/FoxComm/models"
+	"github.com/FoxComm/FoxComm/social_analytics/models"
 	"github.com/FoxComm/FoxComm/spree"
 )
 

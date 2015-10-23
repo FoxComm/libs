@@ -3,8 +3,8 @@ package generators
 import (
 	"fmt"
 
-	"github.com/FoxComm/FoxComm/models"
-	"github.com/FoxComm/FoxComm/repositories"
+	"github.com/FoxComm/FoxComm/social_analytics/models"
+	"github.com/FoxComm/FoxComm/social_analytics/repositories"
 	"github.com/FoxComm/FoxComm/spree"
 	"github.com/FoxComm/FoxComm/utils/test"
 	"github.com/gin-gonic/gin"

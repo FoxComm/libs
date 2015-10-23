@@ -1,7 +1,7 @@
 package generators
 
 import (
-	"github.com/FoxComm/FoxComm/models"
+	"github.com/FoxComm/FoxComm/social_analytics/models"
 	"github.com/FoxComm/FoxComm/utils/test"
 )
 

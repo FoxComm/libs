@@ -2,8 +2,8 @@ package seeds
 
 import (
 	"github.com/FoxComm/FoxComm/endpoints"
-	"github.com/FoxComm/FoxComm/models"
-	"github.com/FoxComm/FoxComm/repositories"
+	"github.com/FoxComm/FoxComm/social_analytics/models"
+	"github.com/FoxComm/FoxComm/social_analytics/repositories"
 )
 
 var Preferences = []models.PromotionPreferences{

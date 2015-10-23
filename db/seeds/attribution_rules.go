@@ -4,7 +4,7 @@ import (
 	"log"
 
 	"github.com/FoxComm/FoxComm/endpoints"
-	"github.com/FoxComm/FoxComm/repositories"
+	"github.com/FoxComm/FoxComm/social_analytics/repositories"
 	"github.com/FoxComm/FoxComm/social_analytics/attributions"
 	"github.com/FoxComm/libs/db/fixtures"
 )
