@@ -9,7 +9,7 @@ PSQL_FOXCOMM = psql foxcomm -c
 PSQL_FOXCOMM_TEST = psql foxcomm_test -c
 
 # Lists of services and packages to perform operations against.
-SERVICE_LIST := announcer configs db logger spree utils
+SERVICE_LIST := announcer configs db etcd_client logger spree utils
 
 BUILD_LIST = $(foreach int, $(SERVICE_LIST), $(int)_build)
 FMT_LIST = $(foreach int, $(SERVICE_LIST), $(int)_fmt)

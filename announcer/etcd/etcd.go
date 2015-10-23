@@ -2,7 +2,7 @@ package etcd
 
 import (
 	"fmt"
-	"github.com/FoxComm/FoxComm/etcd_client"
+	"github.com/FoxComm/libs/etcd_client"
 	"github.com/FoxComm/libs/logger"
 )
 
