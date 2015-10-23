@@ -10,7 +10,7 @@ import (
 	"fmt"
 	"github.com/FoxComm/libs/Godeps/_workspace/src/github.com/gin-gonic/gin/binding"
 	"github.com/FoxComm/libs/Godeps/_workspace/src/github.com/gin-gonic/gin/render"
-	"github.com/julienschmidt/httprouter"
+	"github.com/FoxComm/libs/Godeps/_workspace/src/github.com/julienschmidt/httprouter"
 	"log"
 	"net"
 	"net/http"

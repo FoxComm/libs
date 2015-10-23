@@ -5,7 +5,7 @@
 package gin
 
 import (
-	"github.com/julienschmidt/httprouter"
+	"github.com/FoxComm/libs/Godeps/_workspace/src/github.com/julienschmidt/httprouter"
 	"net/http"
 	"path"
 )
