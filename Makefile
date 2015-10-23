@@ -1,6 +1,7 @@
 # Go parameters
 GOCMD = godep go
 GOBUILD = $(GOCMD) build
+GOINSTALL = $(GOCMD) install
 GOTEST = FC_ENV=test LOG_LEVEL=2 $(GOCMD) test
 GOFMT = $(GOCMD) fmt
 PKG_NAME = github.com/FoxComm/libs
@@ -10,6 +11,7 @@ SERVICE_LIST := announcer configs endpoints etcd_client logger spree utils
 
 BUILD_LIST = $(foreach int, $(SERVICE_LIST), $(int)_build)
 FMT_LIST = $(foreach int, $(SERVICE_LIST), $(int)_fmt)
+INSTALL_LIST = $(foreach int, $(SERVICE_LIST), $(int)_install)
 
 # List actions
 $(BUILD_LIST): %_build:
@@ -17,6 +19,9 @@ $(BUILD_LIST): %_build:
 
 $(FMT_LIST): %_fmt:
 	$(GOFMT) $(PKG_NAME)/$*/...
+	
+$(INSTALL_LIST): %_install:
+	cd $* && $(GOINSTALL)
 
 # Targets
 .PHONY: all test clean setup
@@ -30,6 +35,8 @@ configure:
 build: $(BUILD_LIST)
 
 fmt: $(FMT_LIST)
+
+install: $(INSTALL_LIST)
 
 test:
 	$(GOTEST) -v ./... -cover
