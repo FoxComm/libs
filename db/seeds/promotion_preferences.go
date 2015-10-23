@@ -1,7 +1,7 @@
 package seeds
 
 import (
-	"github.com/FoxComm/FoxComm/endpoints"
+	"github.com/FoxComm/libs/endpoints"
 	"github.com/FoxComm/FoxComm/social_analytics/models"
 	"github.com/FoxComm/FoxComm/social_analytics/repositories"
 )

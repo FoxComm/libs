@@ -8,7 +8,7 @@ import (
 	"gopkg.in/mgo.v2"
 	"gopkg.in/mgo.v2/bson"
 
-	"github.com/FoxComm/FoxComm/endpoints"
+	"github.com/FoxComm/libs/endpoints"
 	"github.com/FoxComm/core_services/feature_manager/core"
 	"github.com/FoxComm/libs/db/masterdb"
 	"github.com/FoxComm/libs/utils"

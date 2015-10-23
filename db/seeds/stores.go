@@ -4,7 +4,7 @@ import (
 	"fmt"
 
 	"github.com/FoxComm/libs/configs"
-	"github.com/FoxComm/FoxComm/endpoints"
+	"github.com/FoxComm/libs/endpoints"
 	"github.com/FoxComm/core_services/feature_manager/core"
 	. "github.com/FoxComm/libs/db/masterdb"
 )

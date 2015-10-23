@@ -5,7 +5,7 @@ import (
 	"os"
 	"strconv"
 
-	"github.com/FoxComm/FoxComm/endpoints"
+	"github.com/FoxComm/libs/endpoints"
 	"github.com/FoxComm/FoxComm/social_shopping/models"
 )
 

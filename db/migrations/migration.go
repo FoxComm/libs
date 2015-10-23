@@ -5,7 +5,7 @@ import (
 	"os"
 	"strconv"
 
-	"github.com/FoxComm/FoxComm/endpoints"
+	"github.com/FoxComm/libs/endpoints"
 	social_shopping_migration "github.com/FoxComm/FoxComm/social_shopping/migration"
 	feature_manager_migration "github.com/FoxComm/core_services/feature_manager/migration"
 	user_migration "github.com/FoxComm/core_services/user/migration"
