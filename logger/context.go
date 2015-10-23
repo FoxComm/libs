@@ -16,8 +16,8 @@ type LogContext struct {
 
 var (
 	defaultCtx = LogContext{
-		FuncRegexp: regexp.MustCompile(`(?i)FoxComm\/FoxComm\/(\w+.+)\.(.+)$`),
-		FileRegexp: regexp.MustCompile(`(?i)FoxComm\/FoxComm\/(\w+.+\.\w+)$`),
+		FuncRegexp: regexp.MustCompile(`(?i)FoxComm\/(FoxComm|libs|core_services)\/(\w+.+)\.(.+)$`),
+		FileRegexp: regexp.MustCompile(`(?i)FoxComm\/(FoxComm|libs|core_services)\/(\w+.+\.\w+)$`),
 		PackRegexp: regexp.MustCompile(`(^\w+)\.(.+)`),
 		SkipStack:  3,
 	}
