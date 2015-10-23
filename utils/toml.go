@@ -7,7 +7,7 @@ import (
 	"github.com/serenize/snaker"
 	"io/ioutil"
 
-	"github.com/FoxComm/FoxComm/configs"
+	"github.com/FoxComm/libs/configs"
 )
 
 // Probably it's temporary solution to make usage of local FoxComm easily

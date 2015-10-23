@@ -7,7 +7,7 @@ import (
 	"sync"
 	"syscall"
 
-	"github.com/FoxComm/FoxComm/configs"
+	"github.com/FoxComm/libs/configs"
 	"github.com/FoxComm/libs/announcer/toml"
 	"github.com/FoxComm/libs/logger"
 )

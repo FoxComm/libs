@@ -1,7 +1,7 @@
 package masterdb
 
 import (
-	"github.com/FoxComm/FoxComm/configs"
+	"github.com/FoxComm/libs/configs"
 	"github.com/jinzhu/gorm"
 	_ "github.com/lib/pq"
 
