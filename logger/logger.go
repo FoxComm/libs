@@ -5,7 +5,7 @@ import (
 	"os"
 	"strconv"
 
-	"github.com/FoxComm/libs/Godeps/_workspace/src/github.com/sirupsen/logrus"
+	"github.com/sirupsen/logrus"
 )
 
 const (

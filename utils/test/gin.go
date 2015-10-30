@@ -3,7 +3,7 @@ package test
 import (
 	"net/http"
 
-	"github.com/FoxComm/libs/Godeps/_workspace/src/github.com/gin-gonic/gin"
+	"github.com/gin-gonic/gin"
 )
 
 // NewContext creates a dummy Gin Context object. This can be used to pass down

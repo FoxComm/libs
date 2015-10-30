@@ -5,7 +5,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/FoxComm/libs/Godeps/_workspace/src/github.com/FoxComm/goauth2/oauth"
+	"github.com/FoxComm/goauth2/oauth"
 )
 
 func init() {

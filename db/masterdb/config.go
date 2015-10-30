@@ -1,8 +1,8 @@
 package masterdb
 
 import (
-	"github.com/FoxComm/libs/Godeps/_workspace/src/github.com/jinzhu/gorm"
-	_ "github.com/FoxComm/libs/Godeps/_workspace/src/github.com/lib/pq"
+	"github.com/jinzhu/gorm"
+	_ "github.com/lib/pq"
 	"github.com/FoxComm/libs/configs"
 
 	"log"

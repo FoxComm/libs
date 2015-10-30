@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/FoxComm/libs/Godeps/_workspace/src/github.com/gin-gonic/gin"
+	"github.com/gin-gonic/gin"
 )
 
 // Gin returns a middleware for logging gin http requests

@@ -1,6 +1,6 @@
 package tasks
 
-import "github.com/FoxComm/libs/Godeps/_workspace/src/gopkg.in/mgo.v2"
+import "gopkg.in/mgo.v2"
 
 // CleanMongoCollections is a utility that will cleanup collections in Mongo.
 // If the collection does not exist, this acts as a no-op.
