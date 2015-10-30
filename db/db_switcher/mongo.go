@@ -7,11 +7,11 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/gin-gonic/gin"
-	"gopkg.in/mgo.v2"
-	"gopkg.in/mgo.v2/bson"
+	"github.com/FoxComm/libs/Godeps/_workspace/src/github.com/gin-gonic/gin"
+	"github.com/FoxComm/libs/Godeps/_workspace/src/gopkg.in/mgo.v2"
+	"github.com/FoxComm/libs/Godeps/_workspace/src/gopkg.in/mgo.v2/bson"
 
-	_ "github.com/jpfuentes2/go-env/autoload"
+	_ "github.com/FoxComm/libs/Godeps/_workspace/src/github.com/jpfuentes2/go-env/autoload"
 
 	"github.com/FoxComm/libs/utils"
 )

@@ -3,8 +3,8 @@ package endpoints
 import (
 	"time"
 
+	"github.com/FoxComm/libs/Godeps/_workspace/src/github.com/mailgun/vulcan/location/httploc"
 	"github.com/FoxComm/libs/configs"
-	"github.com/mailgun/vulcan/location/httploc"
 )
 
 var OriginBackendAPI *Endpoint

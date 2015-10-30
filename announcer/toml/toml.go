@@ -3,7 +3,7 @@ package toml
 import (
 	"bytes"
 	"fmt"
-	"github.com/BurntSushi/toml"
+	"github.com/FoxComm/libs/Godeps/_workspace/src/github.com/BurntSushi/toml"
 	"github.com/FoxComm/libs/configs"
 	"github.com/FoxComm/libs/utils"
 	"io/ioutil"

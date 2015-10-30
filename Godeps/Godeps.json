@@ -1,0 +1,155 @@
+{
+	"ImportPath": "github.com/FoxComm/libs",
+	"GoVersion": "go1.5.1",
+	"Packages": [
+		"./..."
+	],
+	"Deps": [
+		{
+			"ImportPath": "github.com/BurntSushi/toml",
+			"Comment": "v0.1.0-21-g056c9bc",
+			"Rev": "056c9bc7be7190eaa7715723883caffa5f8fa3e4"
+		},
+		{
+			"ImportPath": "github.com/FoxComm/goauth2/oauth",
+			"Rev": "fc68f7d3b48d0dc2490b92e74c7b3b7dad62beb5"
+		},
+		{
+			"ImportPath": "github.com/coreos/go-etcd/etcd",
+			"Comment": "v2.0.0-36-g2038b59",
+			"Rev": "2038b5942e8e7f4f244729ff9353afab8ba11afc"
+		},
+		{
+			"ImportPath": "github.com/daviddengcn/go-colortext",
+			"Rev": "3b18c8575a432453d41fdafb340099fff5bba2f7"
+		},
+		{
+			"ImportPath": "github.com/gin-gonic/gin",
+			"Comment": "v0.5",
+			"Rev": "50e7e427300a7eeeb299a4cd5bc1ebfa04d48528"
+		},
+		{
+			"ImportPath": "github.com/gorilla/context",
+			"Rev": "1c83b3eabd45b6d76072b66b746c20815fb2872d"
+		},
+		{
+			"ImportPath": "github.com/gorilla/securecookie",
+			"Rev": "e95799a481bbcc3d01c2ad5178524cb8bec9f370"
+		},
+		{
+			"ImportPath": "github.com/gorilla/sessions",
+			"Rev": "f7261893ca3ea922c30eabe742c036d2c1de6e0a"
+		},
+		{
+			"ImportPath": "github.com/jinzhu/gorm",
+			"Rev": "484fb30089d23d2d3f0ec538200f5ce4bd44f856"
+		},
+		{
+			"ImportPath": "github.com/jmcvetta/napping",
+			"Comment": "v3.0.1",
+			"Rev": "f48aadd369a55d6436a5e99ca70419dfea62df9b"
+		},
+		{
+			"ImportPath": "github.com/jpfuentes2/go-env",
+			"Rev": "8e0a68de05f21bcefcd581c6b934a1d1e4390fa1"
+		},
+		{
+			"ImportPath": "github.com/julienschmidt/httprouter",
+			"Comment": "v1-55-g1920724",
+			"Rev": "1920724575a29b4da2ac388ce9dcf2c53e2138c0"
+		},
+		{
+			"ImportPath": "github.com/lib/pq",
+			"Comment": "go1.0-cutoff-61-g83c4f41",
+			"Rev": "83c4f410d0aed80a0f44bac6a576a7f2435791f3"
+		},
+		{
+			"ImportPath": "github.com/mailgun/log",
+			"Rev": "2f35a4607f1abf71f97f77f99b0de8493ef6f4ef"
+		},
+		{
+			"ImportPath": "github.com/mailgun/predicate",
+			"Rev": "cb0bff91a7ab7cf7571e661ff883fc997bc554a3"
+		},
+		{
+			"ImportPath": "github.com/mailgun/timetools",
+			"Rev": "fd192d755b00c968d312d23f521eb0cdc6f66bd0"
+		},
+		{
+			"ImportPath": "github.com/mailgun/vulcan/endpoint",
+			"Comment": "v0.1-245-g68da624",
+			"Rev": "68da62480270a5267400baa37587e8c9d451faa3"
+		},
+		{
+			"ImportPath": "github.com/mailgun/vulcan/errors",
+			"Comment": "v0.1-245-g68da624",
+			"Rev": "68da62480270a5267400baa37587e8c9d451faa3"
+		},
+		{
+			"ImportPath": "github.com/mailgun/vulcan/headers",
+			"Comment": "v0.1-245-g68da624",
+			"Rev": "68da62480270a5267400baa37587e8c9d451faa3"
+		},
+		{
+			"ImportPath": "github.com/mailgun/vulcan/loadbalance",
+			"Comment": "v0.1-245-g68da624",
+			"Rev": "68da62480270a5267400baa37587e8c9d451faa3"
+		},
+		{
+			"ImportPath": "github.com/mailgun/vulcan/location/httploc",
+			"Comment": "v0.1-245-g68da624",
+			"Rev": "68da62480270a5267400baa37587e8c9d451faa3"
+		},
+		{
+			"ImportPath": "github.com/mailgun/vulcan/middleware",
+			"Comment": "v0.1-245-g68da624",
+			"Rev": "68da62480270a5267400baa37587e8c9d451faa3"
+		},
+		{
+			"ImportPath": "github.com/mailgun/vulcan/netutils",
+			"Comment": "v0.1-245-g68da624",
+			"Rev": "68da62480270a5267400baa37587e8c9d451faa3"
+		},
+		{
+			"ImportPath": "github.com/mailgun/vulcan/request",
+			"Comment": "v0.1-245-g68da624",
+			"Rev": "68da62480270a5267400baa37587e8c9d451faa3"
+		},
+		{
+			"ImportPath": "github.com/mailgun/vulcan/threshold",
+			"Comment": "v0.1-245-g68da624",
+			"Rev": "68da62480270a5267400baa37587e8c9d451faa3"
+		},
+		{
+			"ImportPath": "github.com/qor/inflection",
+			"Rev": "3272df6c21d04180007eb3349844c89a3856bc25"
+		},
+		{
+			"ImportPath": "github.com/serenize/snaker",
+			"Rev": "d88cc11617e4f179fa2c821a60908d5fabd7bdad"
+		},
+		{
+			"ImportPath": "github.com/sirupsen/logrus",
+			"Comment": "v0.8.7-33-g62f85a2",
+			"Rev": "62f85a2e398fb4cae34ecd1db528422ede248d3c"
+		},
+		{
+			"ImportPath": "github.com/stretchr/testify/assert",
+			"Comment": "v1.0-51-gf3960ab",
+			"Rev": "f3960ab1f9664ecc4e27c78af27cc9063d745a43"
+		},
+		{
+			"ImportPath": "github.com/tuvistavie/securerandom",
+			"Rev": "15512123a948d62f6361bd84818e11f2ad84059a"
+		},
+		{
+			"ImportPath": "github.com/ugorji/go/codec",
+			"Rev": "8a2a3a8c488c3ebd98f422a965260278267a0551"
+		},
+		{
+			"ImportPath": "gopkg.in/mgo.v2",
+			"Comment": "r2015.10.05",
+			"Rev": "f402e3a216db333ae6b3ba68b9152a34a0bc6984"
+		}
+	]
+}

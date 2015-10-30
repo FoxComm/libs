@@ -3,10 +3,10 @@ package spree
 import (
 	"net/http"
 
+	"github.com/FoxComm/libs/Godeps/_workspace/src/github.com/jmcvetta/napping"
 	"github.com/FoxComm/libs/logger"
 	"github.com/FoxComm/libs/utils"
 	_ "github.com/FoxComm/libs/utils/ssl"
-	"github.com/jmcvetta/napping"
 )
 
 func (ep *SpreeEndpoint) CreatePromotion(spreeToken, spreeUrl string, params interface{}) (*http.Response, error) {

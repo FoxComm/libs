@@ -3,8 +3,8 @@ package utils
 import (
 	"bytes"
 	"fmt"
-	"github.com/BurntSushi/toml"
-	"github.com/serenize/snaker"
+	"github.com/FoxComm/libs/Godeps/_workspace/src/github.com/BurntSushi/toml"
+	"github.com/FoxComm/libs/Godeps/_workspace/src/github.com/serenize/snaker"
 	"io/ioutil"
 
 	"github.com/FoxComm/libs/configs"

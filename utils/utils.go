@@ -10,11 +10,11 @@ import (
 	"strings"
 	"time"
 
-	"github.com/FoxComm/goauth2/oauth"
-	"github.com/gin-gonic/gin"
-	"github.com/jinzhu/gorm"
-	"github.com/tuvistavie/securerandom"
-	"gopkg.in/mgo.v2"
+	"github.com/FoxComm/libs/Godeps/_workspace/src/github.com/FoxComm/goauth2/oauth"
+	"github.com/FoxComm/libs/Godeps/_workspace/src/github.com/gin-gonic/gin"
+	"github.com/FoxComm/libs/Godeps/_workspace/src/github.com/jinzhu/gorm"
+	"github.com/FoxComm/libs/Godeps/_workspace/src/github.com/tuvistavie/securerandom"
+	"github.com/FoxComm/libs/Godeps/_workspace/src/gopkg.in/mgo.v2"
 )
 
 var dataSourceDatabaseMap = map[string]*gorm.DB{}
