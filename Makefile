@@ -1,5 +1,5 @@
 # Go parameters
-GOCMD = godep go
+GOCMD = go
 GOBUILD = $(GOCMD) build
 GOINSTALL = $(GOCMD) install
 GOTEST = FC_ENV=test LOG_LEVEL=2 $(GOCMD) test
@@ -27,10 +27,7 @@ $(INSTALL_LIST): %_install:
 .PHONY: all test clean setup
 
 configure:
-	cd $(GOPATH)
-	go get -u github.com/tools/Godep
-	go get -u github.com/pilu/fresh
-	go get -u github.com/ddollar/forego
+	gpm install
 
 build: $(BUILD_LIST)
 
