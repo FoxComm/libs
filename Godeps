@@ -4,3 +4,15 @@ github.com/FoxComm/goauth2/oauth
 github.com/jpfuentes2/go-env/autoload
 github.com/serenize/snaker d88cc11617e4f179fa2c821a60908d5fabd7bdad
 github.com/tuvistavie/securerandom 15512123a948d62f6361bd84818e11f2ad84059a
+github.com/BurntSushi/toml
+github.com/coreos/go-etcd/etcd
+github.com/daviddengcn/go-colortext
+github.com/gin-gonic/gin
+github.com/gorilla/sessions
+github.com/jinzhu/gorm
+github.com/sirupsen/logrus
+github.com/mailgun/vulcan 83f069cc4af534d480dc127ef3a9393cf981c72e
+github.com/mailgun/timetools 7e6055773c5137efbeb3bd2410d705fe10ab6bfd
+github.com/mailgun/route 85cf368efd247dabbcc2e53272ef4276f94a87c4
+github.com/mailgun/predicate cb0bff91a7ab7cf7571e661ff883fc997bc554a3
+github.com/jmcvetta/napping
